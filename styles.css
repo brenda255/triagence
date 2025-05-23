@@ -63,3 +63,11 @@ button:hover {
   background-color: #1b2836;
 }
 
+.result-box {
+  background-color: #f0f4f8;
+  padding: 1rem;
+  border-left: 4px solid #2d3e50;
+  border-radius: 4px;
+  margin-top: .8rem;
+}
+
