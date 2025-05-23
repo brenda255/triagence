@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triagence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Triagence</h1>
+        <p>AI-powered ticket classification and sentiment detection</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <label for="ticket-input">Enter Support Ticket</label>
+            <textarea id="ticket-input" placeholder="Paste customer ticket here..." rows="6"></textarea>
+
+            <label for="nlp-task">Select NLP Task</label>
+            <select id="nlp-task">
+                <option value="sentiment">Sentiment Analysis</option>
+                <option value="classification">Category Classification</option>
+            </select>
+
+            <button id="analyze-btn">Analyze Ticket</button>
+        </section>
+
+        <section class="output-section">
+            <h2>Analysis Results</h2>
+            <div id="results">
+                <!-- Results will appear here -->
+            </div>
+        </section>
+    </main>
+    </main>
+</body>
+
+</html>
