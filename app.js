@@ -28,18 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     task: selectedTask
                 }),
             });
-
-            const data = await response.json();
+ 
+            const { result, urgency } = await response.json();
             let outputHTML = "";
 
             if (selectedTask === "sentiment") {
-                const label = data[0]?.label;
-                const score = (data[0]?.score * 100).toFixed(2);
+                const label = result[0]?.label;
+                const score = (result[0]?.score * 100).toFixed(2);
                 outputHTML = `<p><strong>Sentiment:</strong> ${label} (${score}%)</p>`;
+                outputHTML += `<p><strong>Urgency:</strong> <span class="urgency-tag ${urgency.toLowerCase()}">${urgency}</span></p>`;
+
             } else if (selectedTask === "classification") {
-                const label = data[0]?.label;
-                const score = (data[0]?.score * 100).toFixed(2);
+                const label = result[0]?.label;
+                const score = (result[0]?.score * 100).toFixed(2);
                 outputHTML = `<p><strong>Category:</strong> ${label} (${score}%)</p>`;
+                outputHTML += `<p><strong>Urgency:</strong> <span class="urgency-tag ${urgency.toLowerCase()}">${urgency}</span></p>`;
+
             }
 
             resultsDiv.innerHTML = `<div class="result-box">${outputHTML}</div>`;
