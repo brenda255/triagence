@@ -70,4 +70,28 @@ button:hover {
   border-radius: 4px;
   margin-top: .8rem;
 }
+.urgency-tag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
 
+.urgency-tag.high {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.urgency-tag.medium {
+  background-color: #f39c12;
+  color: white;
+}
+
+.urgency-tag.low {
+  background-color: #27ae60;
+  color: white;
+}
+
+.urgency-tag.unknown {
+  background-color: #95a5a6;
+  color: white;
+}
